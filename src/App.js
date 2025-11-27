@@ -35,7 +35,7 @@ export default function App() {
             <h1 className="couple-name">
               {bride} <span>&</span> {groom}
             </h1>
-            <p className="forever-text">تا ابد با هم</p>
+            
           </div>
         </div>
       )}

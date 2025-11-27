@@ -166,6 +166,9 @@ body{
   font-size:12px;
   color: #777;
 }
+.couple-name{
+  font-size: 45px;
+}
 
 /* ریسپانسیو - دسکتاپ کوچک و تبلت */
 @media (max-width:720px){
@@ -290,19 +293,19 @@ body{
 .p7 { left: 60%; animation-duration: 7.2s;  animation-delay: 2.1s; }
 .p8 { left: 68%; animation-duration: 8.4s;  animation-delay: 1.6s; }
 .p9 { left: 76%; animation-duration: 7.6s;  animation-delay: .7s; }
-.p10 { left: 84%; animation-duration: 9.1s; animation-delay: 1.4s; }
-.p11 { left: 92%; animation-duration: 8.1s; animation-delay: 2.4s; }
-.p12 { left: 5%;  animation-duration: 7.5s;  animation-delay: 1s; }
-.p13 { left: 12%; animation-duration: 8.2s;  animation-delay: 2s; }
-.p14 { left: 20%; animation-duration: 7.8s;  animation-delay: 3s; }
+.p10 { left: 4%; animation-duration: 9.1s; animation-delay: 1.4s; }
+.p11 { left: 22%; animation-duration: 8.1s; animation-delay: 2.4s; }
+.p12 { left: 51%;  animation-duration: 7.5s;  animation-delay: 1s; }
+.p13 { left: 22%; animation-duration: 8.2s;  animation-delay: 2s; }
+.p14 { left: 50%; animation-duration: 7.8s;  animation-delay: 3s; }
 .p15 { left: 28%; animation-duration: 9s;    animation-delay: .4s; }
-.p16 { left: 36%; animation-duration: 7.3s;  animation-delay: 1s; }
+.p16 { left: 76%; animation-duration: 7.3s;  animation-delay: 1s; }
 .p17 { left: 44%; animation-duration: 8.5s;  animation-delay: 1.9s; }
 .p18 { left: 52%; animation-duration: 9.4s;  animation-delay: 5s; }
-.p19 { left: 60%; animation-duration: 7.2s;  animation-delay: 4; }
-.p20 { left: 68%; animation-duration: 8.4s;  animation-delay: 1.6s; }
+.p19 { left: 50%; animation-duration: 7.2s;  animation-delay: 4; }
+.p20 { left: 38%; animation-duration: 8.4s;  animation-delay: 1.6s; }
 .p21 { left: 76%; animation-duration: 7.6s;  animation-delay: .7s; }
-.p22 { left: 84%; animation-duration: 9.1s; animation-delay: 4s; }
+.p22 { left: 94%; animation-duration: 9.1s; animation-delay: 4s; }
 .p23 { left: 92%; animation-duration: 8.1s; animation-delay: 2s; }
 
 /* متن وسط اینترو */
