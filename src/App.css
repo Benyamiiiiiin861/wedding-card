@@ -3,10 +3,7 @@
   src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/Vazir.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "IranNastaliq";
-  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/iran-nastaliq/dist/IRNazeh.woff2") format("woff2");
-}
+
 
 /* پایه */
 :root{
