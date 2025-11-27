@@ -80,7 +80,7 @@ export default function App() {
 
             <div className="info-row">
               <div className="info-left">۱۹ تا ۲۳ به صرف شام و شیرینی</div>
-              <div className="info-right">باغ تالار مشاهیر، خیابان ستارخان، نبش جهانی‌نسب</div>
+              <div className="info-right">تالار ونوس، کیلومتر 5 شهرک ولی عصر </div>
             </div>
           </div>
         </div>
