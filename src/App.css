@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font/dist/Vazir.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "IranNastaliq";
+  src: url("https://cdn.jsdelivr.net/gh/rastikerdar/iran-nastaliq/dist/IRNazeh.woff2") format("woff2");
+}
+
+/* پایه */
+:root{
+  --card-width: 780px;
+  --panel-bg: #ffffff;
+  --accent: #e85a6f;
+  --muted:#6b6b6b;
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: "Vazir", "Tahoma", system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #fffafc 0%, #fff 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:26px;
+  direction: rtl;
+}
+
+/* کل قاب کارت */
+.page-root{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.card-frame {
+  width: min(92vw, var(--card-width));
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 38px rgba(0,0,0,0.15);
+  background: #ffffff;
+  border: 1px solid #f3eae2;
+}
+
+/* ناحیه عکس بالا */
+.photo-area{
+  position: relative;
+  height: 420px;
+  background: #000;
+  overflow: hidden;
+}
+
+/* عکس */
+.photo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+  transform: scale(1.02);
+  filter: saturate(.95) contrast(.98);
+}
+
+/* منحنی سفید بین عکس و پنل */
+.curved-divider{
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height: 120px;
+  width:100%;
+  display:block;
+  filter: drop-shadow(0 -6px 18px rgba(0,0,0,0.06));
+}
+
+/* پنل سفید پایین */
+.panel{
+  background: var(--panel-bg);
+  padding: 26px 36px 36px 36px;
+  text-align: center;
+  position: relative;
+}
+
+/* نام‌های کنار (چپ و راست) */
+.side-names{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:-28px;
+  margin-bottom:6px;
+}
+.name{
+  font-size:20px;
+  color:#333;
+  font-weight:700;
+  opacity:0.95;
+  padding:8px 14px;
+  background: transparent;
+}
+.right-name{ transform: translateX(10px); }
+.left-name{ transform: translateX(-10px); }
+
+/* متن تزیینی وسط */
+.calligraphy-wrap{
+  margin-top:6px;
+  margin-bottom:6px;
+  display:flex;
+  justify-content:center;
+}
+.calligraphy{
+  font-family: "IranNastaliq";
+  font-size:42px;
+  color:#111;
+  font-weight:normal;
+  line-height:1.8;
+}
+
+/* دعوت و نام مهمان */
+.to-guest{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+.guest-name{
+  margin-top:6px;
+  font-size:22px;
+  color:#111;
+  font-weight:800;
+}
+
+/* تاریخ بزرگ */
+.date-row{
+  margin-top:16px;
+}
+.date{
+  font-size:24px;
+  font-weight:900;
+  color:#111;
+  letter-spacing:0.6px;
+}
+
+/* خط تزئینی قرمز */
+.red-divider{
+  margin-top:12px;
+  margin-bottom:8px;
+  display:flex;
+  justify-content:center;
+}
+.flourish{ width:240px; height:36px; }
+
+/* اطلاعات پایین */
+.info-row{
+  margin-top:10px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  color:var(--muted);
+  font-size:14px;
+  flex-wrap:wrap;
+}
+.info-left{ flex:1 1 45%; text-align:right; }
+.info-right{ flex:1 1 45%; text-align:left; }
+
+/* footer کوچک */
+.small-footer{
+  margin-top:18px;
+  font-size:12px;
+  color: #777;
+}
+
+/* ریسپانسیو - دسکتاپ کوچک و تبلت */
+@media (max-width:720px){
+  .photo-area{ height:360px; }
+  .calligraphy{ font-size:36px; }
+  .date{ font-size:20px; }
+  .card-frame{ border-radius:14px; }
+  .panel{ padding:20px; }
+  .info-row{ font-size:13px; }
+}
+
+/* ریسپانسیو - موبایل های کوچک */
+@media (max-width: 480px) {
+  .photo-area { 
+    height: 300px;
+  }
+  
+  .panel {
+    padding: 20px 16px 26px 16px;
+  }
+  
+  .calligraphy {
+    font-size: 32px;
+    line-height: 1.6;
+  }
+  
+  .side-names {
+    margin-top: -20px;
+  }
+  
+  .name {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+  
+  .guest-name {
+    font-size: 18px;
+  }
+  
+  .date {
+    font-size: 20px;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .info-left, .info-right {
+    text-align: center;
+    flex: none;
+  }
+}
+
+/* برای تبلت */
+@media (min-width: 481px) and (max-width: 768px) {
+  .photo-area {
+    height: 380px;
+  }
+}
