@@ -225,4 +225,127 @@ body{
   .photo-area {
     height: 380px;
   }
+}/* انیمیشن اینترو عروسی — فقط اینو آخر فایل اضافه کن */
+.wedding-intro {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #fff5f8 0%, #ffeef2 100%);
+  z-index: 99999;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeOut 2s ease-out 7s forwards;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.petal {
+  position: absolute;
+  top: -150px;               /* خیلی بالاتر از صفحه */
+  width: 18px;
+  height: 34px;
+  background: radial-gradient(circle at 30% 30%, #ff5c8a, #e91e63);
+  border-radius: 100% 0% 80% 20%;
+  opacity: 0;
+  animation: petalFall linear infinite;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+
+.petal::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  background: #ffffff33;
+  border-radius: 100% 0% 80% 20%;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(-200px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(120vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+
+/* موقعیت و تاخیر گلبرگ‌ها */
+.p0 { left: 5%;  animation-duration: 7.5s;  animation-delay: 0s; }
+.p1 { left: 12%; animation-duration: 8.2s;  animation-delay: .4s; }
+.p2 { left: 20%; animation-duration: 7.8s;  animation-delay: 1s; }
+.p3 { left: 28%; animation-duration: 9s;    animation-delay: .2s; }
+.p4 { left: 36%; animation-duration: 7.3s;  animation-delay: 1.7s; }
+.p5 { left: 44%; animation-duration: 8.5s;  animation-delay: 1.3s; }
+.p6 { left: 52%; animation-duration: 9.4s;  animation-delay: .6s; }
+.p7 { left: 60%; animation-duration: 7.2s;  animation-delay: 2.1s; }
+.p8 { left: 68%; animation-duration: 8.4s;  animation-delay: 1.6s; }
+.p9 { left: 76%; animation-duration: 7.6s;  animation-delay: .7s; }
+.p10 { left: 84%; animation-duration: 9.1s; animation-delay: 1.4s; }
+.p11 { left: 92%; animation-duration: 8.1s; animation-delay: 2.4s; }
+.p12 { left: 5%;  animation-duration: 7.5s;  animation-delay: 1s; }
+.p13 { left: 12%; animation-duration: 8.2s;  animation-delay: 2s; }
+.p14 { left: 20%; animation-duration: 7.8s;  animation-delay: 3s; }
+.p15 { left: 28%; animation-duration: 9s;    animation-delay: .4s; }
+.p16 { left: 36%; animation-duration: 7.3s;  animation-delay: 1s; }
+.p17 { left: 44%; animation-duration: 8.5s;  animation-delay: 1.9s; }
+.p18 { left: 52%; animation-duration: 9.4s;  animation-delay: 5s; }
+.p19 { left: 60%; animation-duration: 7.2s;  animation-delay: 4; }
+.p20 { left: 68%; animation-duration: 8.4s;  animation-delay: 1.6s; }
+.p21 { left: 76%; animation-duration: 7.6s;  animation-delay: .7s; }
+.p22 { left: 84%; animation-duration: 9.1s; animation-delay: 4s; }
+.p23 { left: 92%; animation-duration: 8.1s; animation-delay: 2s; }
+
+/* متن وسط اینترو */
+.intro-content h1 {
+  font-family: 64px;
+  font-family: "IranNastaliq", "Nastaliq", serif;
+  color: #c2185b;
+  margin: 0;
+  text-shadow: 0 8px 30px rgba(194, 24, 91, 0.5);
+ 
+  animation: fadeInUp 2.8s ease-out;
+}
+
+.intro-content span {
+  color: #ff6b9d;
+  font-size: 48px;
+  margin: 0 10px;
+}
+
+.forever-text {
+  font-size: 28px;
+  color: #d6336c;
+  margin-top: 24px;
+  letter-spacing: 5px;
+  font-weight: 500;
+  animation: fadeInUp 3.4s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* وقتی اینترو تموم شد، کارت اصلی ظاهر بشه */
+.page-root {
+  opacity: 0;
+  transition: opacity 1.4s ease-out;
+}
+
+.page-root.visible {
+  opacity: 1;
+}
+
+.page-root.hidden {
+  opacity: 0;
 }
