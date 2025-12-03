@@ -14,7 +14,7 @@ export default function App() {
 
   const location = {
     name: "تالار ونوس",
-    address: "  تربت حیدریه،بلوار باهنر،باهنر۵۶",
+    address: "  تربت حیدریه،باهنر۵۶،تالار ونوس",
    
     lat: 35.30984942078933, 
     lng: 59.21183983874068,
