@@ -223,12 +223,11 @@ body{
   }
 }
 
-/* برای تبلت */
 @media (min-width: 481px) and (max-width: 768px) {
   .photo-area {
     height: 380px;
   }
-}/* انیمیشن اینترو عروسی — فقط اینو آخر فایل اضافه کن */
+}
 .wedding-intro {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -247,7 +246,7 @@ body{
 
 .petal {
   position: absolute;
-  top: -150px;               /* خیلی بالاتر از صفحه */
+  top: -150px;           
   width: 18px;
   height: 34px;
   background: radial-gradient(circle at 30% 30%, #ff5c8a, #e91e63);
@@ -282,7 +281,6 @@ body{
 }
 
 
-/* موقعیت و تاخیر گلبرگ‌ها */
 .p0 { left: 5%;  animation-duration: 7.5s;  animation-delay: 0s; }
 .p1 { left: 12%; animation-duration: 8.2s;  animation-delay: .4s; }
 .p2 { left: 20%; animation-duration: 7.8s;  animation-delay: 1s; }
@@ -308,7 +306,6 @@ body{
 .p22 { left: 94%; animation-duration: 9.1s; animation-delay: 4s; }
 .p23 { left: 92%; animation-duration: 8.1s; animation-delay: 2s; }
 
-/* متن وسط اینترو */
 .intro-content h1 {
   font-family: 64px;
   font-family: "IranNastaliq", "Nastaliq", serif;
@@ -339,7 +336,6 @@ body{
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* وقتی اینترو تموم شد، کارت اصلی ظاهر بشه */
 .page-root {
   opacity: 0;
   transition: opacity 1.4s ease-out;
@@ -351,4 +347,127 @@ body{
 
 .page-root.hidden {
   opacity: 0;
+}
+
+.navigation-section {
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+  border-radius: 16px;
+  border: 1px solid #f0e6e6;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(232, 90, 111, 0.08);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.location-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.location-icon {
+  color: #e85a6f;
+  font-size: 22px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 24px;
+  border: none;
+  border-radius: 14px;
+  font-family: "Vazir", Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 18px auto;
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.2);
+}
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(66, 133, 244, 0.3);
+}
+
+.nav-btn:active {
+  transform: translateY(-1px);
+}
+
+.google-btn {
+  background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+  color: white;
+}
+
+.btn-icon {
+  font-size: 20px;
+}
+
+.location-hint {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+
+@media (max-width: 720px) {
+  .navigation-section {
+    padding: 18px 16px;
+    margin-top: 20px;
+  }
+  
+  .nav-btn {
+    padding: 16px 20px;
+    font-size: 15px;
+    max-width: 280px;
+  }
+  
+  .location-title {
+    font-size: 16px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-section {
+    padding: 16px 14px;
+    margin-top: 16px;
+  }
+  
+  .nav-btn {
+    padding: 15px 18px;
+    font-size: 14.5px;
+    max-width: 260px;
+    gap: 10px;
+  }
+  
+  .btn-icon {
+    font-size: 18px;
+  }
+  
+  .location-hint {
+    font-size: 12px;
+  }
 }

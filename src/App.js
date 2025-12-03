@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import bg from "./wedding.jpg";
+import { FaMapMarkerAlt, FaDirections } from "react-icons/fa";
 
 export default function App() {
   const params = new URLSearchParams(window.location.search);
@@ -8,39 +9,53 @@ export default function App() {
 
   const bride = "زهرا";
   const groom = "محمدرضا";
-  const mainCalligraphy = "دو دل به عهدِ محبت سپردند مهرِ خویش";
-  const mainCalligraphy1 = "فلک گواهِ شبِ وصل و سپیده‌دم به پیش";
+  const mainCalligraphy = "به سنت عشق گرد هم می آییم";
+  const mainCalligraphy1 = "آنجا که دوست داشتن تنها کلام زندگیست";
+
+  const location = {
+    name: "تالار ونوس",
+    address: "  تربت حیدریه،بلوار باهنر،باهنر۵۶",
+   
+    lat: 35.309910337486436,   
+    lng: 59.212018991741076,  
+  
+    getGoogleMapsUrl: function() {
+      return `https://www.google.com/maps/dir/?api=1&destination=${this.lat},${this.lng}&travelmode=driving&dir_action=navigate`;
+    }
+  };
 
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 9000); // ۵.۳ ثانیه انیمیشن قشنگ، بعد کارت اصلی میاد
+    }, 9000);
     return () => clearTimeout(timer);
   }, []);
 
+  
+  const openGoogleMaps = () => {
+    window.open(location.getGoogleMapsUrl(), '_blank', 'noopener noreferrer');
+  };
+
   return (
     <>
-      {/* اینترو عروسی — گلبرگ + اسم عروس و داماد */}
+   
       {showIntro && (
         <div className="wedding-intro">
-          
-          {/* گلبرگ‌های ریزان */}
-          {[...Array(16)].map((_, i) => (
-            <div  key={i}  className={`petal p${i}`}> </div>
+          {[...Array(24)].map((_, i) => (
+            <div key={i} className={`petal p${i}`}> </div>
           ))}
 
           <div className="intro-content">
             <h1 className="couple-name">
               {bride} <span>&</span> {groom}
             </h1>
-            
           </div>
         </div>
       )}
 
-      {/* کارت اصلی شما — دقیقاً همون کد قبلی بدون هیچ تغییری */}
+     
       <div className={`page-root ${showIntro ? "hidden" : "visible"}`}>
         <div className="card-frame">
           <div className="photo-area">
@@ -79,13 +94,34 @@ export default function App() {
             </div>
 
             <div className="info-row">
-              <div className="info-left">۱۹ تا ۲۳ به صرف شام و شیرینی</div>
-              <div className="info-right">تالار ونوس، کیلومتر 5 شهرک ولی عصر </div>
+              <div className="info-left">۱۷ تا ۲۳ به صرف شام و شیرینی</div>
+              <div className="info-right">{location.address}</div>
+            </div>
+
+         
+            <div className="navigation-section">
+              <div className="location-title">
+                <FaMapMarkerAlt className="location-icon" />
+                <span>دریافت مسیر از طریق Google Maps</span>
+              </div>
+              
+              <button 
+                className="nav-btn google-btn"
+                onClick={openGoogleMaps}
+                aria-label="مسیریابی با Google Maps"
+              >
+                <FaDirections className="btn-icon" />
+                <span>مسیریابی با Google Maps</span>
+              </button>
+              
+              <p className="location-hint">
+                با کلیک روی دکمه بالا، مستقیماً به Google Maps منتقل می‌شوید
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="small-footer">دعوتنامه دیجیتال — ساخته شده با ❤️</div>
+        <div className="small-footer">دعوتنامه دیجیتال — Created By Beni</div>
       </div>
     </>
   );
