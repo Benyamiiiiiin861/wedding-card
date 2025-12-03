@@ -96,8 +96,21 @@ body{
   padding:8px 14px;
   background: transparent;
 }
-.right-name{ transform: translateX(10px); }
-.left-name{ transform: translateX(-10px); }
+.right-name{ 
+  transform: translateX(10px);
+  font-family: "IranNastaliq";
+  font-size:49px;
+  color:#111;
+  font-weight:normal;
+  line-height:1.8; }
+.left-name{ 
+  transform: translateX(-10px); 
+  font-family: "IranNastaliq";
+  font-size:49px;
+  color:#111;
+  font-weight:normal;
+  line-height:1.8;
+}
 
 /* متن تزیینی وسط */
 .calligraphy-wrap{

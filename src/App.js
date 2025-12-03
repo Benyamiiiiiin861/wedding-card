@@ -16,8 +16,8 @@ export default function App() {
     name: "تالار ونوس",
     address: "  تربت حیدریه،بلوار باهنر،باهنر۵۶",
    
-    lat: 35.309910337486436,   
-    lng: 59.212018991741076,  
+    lat: 35.30984942078933, 
+    lng: 59.21183983874068,
   
     getGoogleMapsUrl: function() {
       return `https://www.google.com/maps/dir/?api=1&destination=${this.lat},${this.lng}&travelmode=driving&dir_action=navigate`;
@@ -49,7 +49,7 @@ export default function App() {
 
           <div className="intro-content">
             <h1 className="couple-name">
-              {bride} <span>&</span> {groom}
+             {groom} <span>&</span>  {bride}
             </h1>
           </div>
         </div>
@@ -67,8 +67,8 @@ export default function App() {
 
           <div className="panel">
             <div className="side-names">
-              <div className="name right-name">{bride}</div>
-              <div className="name left-name">{groom}</div>
+              <div className="name right-name">{groom}</div>
+              <div className="name left-name">{bride}</div>
             </div>
 
             <div className="calligraphy-wrap">
@@ -78,7 +78,7 @@ export default function App() {
               <div className="calligraphy">{mainCalligraphy1}</div>
             </div>
 
-            <div className="to-guest">جناب آقای </div>
+            <div className="to-guest"> مهمان عزیز: </div>
             <div className="guest-name">{guestName}</div>
 
             <div className="date-row">
