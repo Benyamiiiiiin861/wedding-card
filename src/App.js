@@ -9,6 +9,8 @@ export default function App() {
 
   const bride = "زهرا";
   const groom = "محمدرضا";
+  const bridefamily = "زارعی پور";
+  const groomfamily = "یعقوبی";
   const mainCalligraphy = "به سنت عشق گرد هم می آییم";
   const mainCalligraphy1 = "آنجا که دوست داشتن تنها کلام زندگیست";
 
@@ -68,7 +70,13 @@ export default function App() {
           <div className="panel">
             <div className="side-names">
               <div className="name right-name">{groom}</div>
-              <div className="name left-name">{bride}</div>
+              
+              <div className="name left-name">{groomfamily}</div>
+            </div>
+            <div className="side-names">
+              <div className="name right-name">{bride}</div>
+              
+              <div className="name left-name">{bridefamily}</div>
             </div>
 
             <div className="calligraphy-wrap">
@@ -114,9 +122,7 @@ export default function App() {
                 <span>مسیریابی با Google Maps</span>
               </button>
               
-              <p className="location-hint">
-                با کلیک روی دکمه بالا، مستقیماً به Google Maps منتقل می‌شوید
-              </p>
+             
             </div>
           </div>
         </div>

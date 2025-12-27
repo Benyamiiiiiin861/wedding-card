@@ -78,6 +78,7 @@ body{
   padding: 26px 36px 36px 36px;
   text-align: center;
   position: relative;
+  
 }
 
 /* نام‌های کنار (چپ و راست) */
@@ -85,31 +86,35 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-top:-28px;
-  margin-bottom:6px;
+  margin-top:-22px;
+  margin-bottom:-10px;
+}
+
+/* فاصله کمتر بین دو ردیف اسم */
+.side-names + .side-names{
+  margin-top:-32px;
 }
 .name{
-  font-size:20px;
-  color:#333;
-  font-weight:700;
-  opacity:0.95;
-  padding:8px 14px;
+  color:#111;
+  font-weight:normal;
+  padding:6px 10px;
   background: transparent;
+  font-family: "IranNastaliq", "Vazir", serif;
 }
+
+/* اسم‌ها */
 .right-name{ 
-  transform: translateX(10px);
-  font-family: "IranNastaliq";
-  font-size:49px;
-  color:#111;
-  font-weight:normal;
-  line-height:1.8; }
+  transform: translateX(6px);
+  font-size:42px;
+  line-height:1.5;
+}
+
+/* فامیلی‌ها (کمی کوچکتر و ظریف‌تر) */
 .left-name{ 
-  transform: translateX(-10px); 
-  font-family: "IranNastaliq";
-  font-size:49px;
-  color:#111;
-  font-weight:normal;
-  line-height:1.8;
+  transform: translateX(-6px); 
+  font-size:38px;
+  line-height:1.45;
+  opacity:0.9;
 }
 
 /* متن تزیینی وسط */
@@ -195,6 +200,7 @@ body{
 
 /* ریسپانسیو - موبایل های کوچک */
 @media (max-width: 480px) {
+  
   .photo-area { 
     height: 300px;
   }
